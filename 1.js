@@ -22,7 +22,7 @@
 class Library{
     #books;
     constructor(arrayBooks){
-        if(this.findRepeats(arrayBooks)){
+        if (Library.findRepeats(arrayBooks)) {
             throw Error('В массиве обнаружены дубликаты!')
         }
         this.#books = arrayBooks;
@@ -33,7 +33,7 @@ class Library{
      * @param {Array} arrayBooks 
      * @returns {boolean}
      */
-    findRepeats(arrayBooks){
+    static findRepeats(arrayBooks){
         const setBooks = new Set(arrayBooks);
         return !(setBooks.size === arrayBooks.length);
     }
@@ -43,7 +43,7 @@ class Library{
     }
 
     addBooks(title){
-        if (this.#books.find(element => element === title)){
+        if (this.hasBook(title)){
             throw Error ('Такая книга уже добавлена!')
         }
         this.#books.push(title);
