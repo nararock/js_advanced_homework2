@@ -1,0 +1,21 @@
+.my_shop{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 32%;
+}
+
+.error{
+    color: red;
+}
+
+textarea{
+    width: 60%;
+    height: 50px;
+}
